@@ -1,0 +1,358 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
+  }
+  :root {
+	--blue: rgb(24, 171, 255);
+	--full-width: 100%;
+	--content-width: 80%;
+	--one-column: 1fr;
+	--one-one-columns: 1fr 1fr;
+	--one-one-one-columns: 1fr 1fr 1fr;
+	--one-one-one-one-columns: 1fr 1fr 1fr 1fr;
+	--one-two-columns: 1fr 2fr;
+	--one-three-columns: 1fr 3fr;
+	--two-three-columns: 2fr 3fr;
+	--three-two-columns: 3fr 2fr;
+	--three-one-columns: 3fr 1fr;
+	--black-color: rgb(0, 0, 0);
+	--dark-grey-color: rgb(13, 13, 13);
+	--light-grey-color: rgb(156, 156, 156);
+	--background-two: rgb(255, 255, 255);
+	--orange-color: rgb(240, 88, 41);
+	--white-color: rgb(255, 255, 255);
+	--width-set-one: 80%;
+  }
+body {
+	/* background: rgb(255,201,0);
+	background: -moz-linear-gradient(45deg, rgba(255,201,0,1) 0%, rgba(255,85,0,1) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(255,201,0,1) 0%, rgba(255,85,0,1) 100%);
+	background: linear-gradient(45deg, rgba(255,201,0,1) 0%, rgba(255,85,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc900",endColorstr="#ff5500",GradientType=1); */
+	background: black;
+}
+h1 {
+	color: var(--orange-color);
+	padding-bottom: 10px;
+	font-weight: 600;
+}
+h2 {
+	color: var(--orange-color);
+	padding-bottom: 10px;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+p {
+	color: white;
+	padding-bottom: 20px;
+}
+ul {
+	list-style-type: none;
+	margin-bottom: 20px;
+}
+li {
+	text-indent: 15px;
+	color: var(--light-grey-color);
+	font-size: .9em;
+}
+.github-icon {
+	display: grid;
+	width: 30px;
+	fill: var(--orange-color);
+}
+/**********************************************************************************************/
+/**************************************   SCROLLER   ******************************************/
+/**********************************************************************************************/
+
+.page-change-ul {
+	display: grid;
+	list-style-type: none;
+}
+.page-changer {
+	display: inline-grid;
+	width: 20px;
+	fill: var(--light-grey-color);
+	padding: 10px 0px;
+}
+.page-changer:hover {
+	cursor: pointer;
+	fill: var(--orange-color);
+}
+.page-changer:hover ~ .page-change-title{
+	display: inline-grid;
+}
+
+.page-scroll {
+	display: grid;
+	align-items: center;
+	margin-left: 2.5%;
+	position: fixed;
+	height: calc(100vh + 65px);
+	color: white;
+}
+
+.page-change-title {
+	display: none;
+	vertical-align: top;
+	padding: 10px 0px;
+	font-size: 1em;
+	padding-left: 10px;
+	color: var(--light-grey-color);
+}
+
+/**********************************************************************************************/
+/****************************************   NAV   *********************************************/
+/**********************************************************************************************/
+nav {
+	display: grid;
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	background-color:var(--dark-grey-color);
+}
+.nav-wrapper {
+	display: grid;
+	grid-template-columns: var(--three-two-columns);
+	width: 95%;
+	justify-self: center;
+}
+.nav-wrapper div:nth-child(2){
+	display: grid;
+	justify-content: right;
+}
+.nav-ul {
+	display: inline-block;
+	height: 100%;
+}
+.nav-li {
+	display: inline-grid;
+	height: 100%;
+	align-content: center;
+	vertical-align: middle;
+	padding-right: 20px;
+}
+.nav-links {
+	text-decoration: none;
+	/* color: var(--black-color); */
+	color: var(--light-grey-color);
+	font-size: .9em;
+	font-weight: bold;
+}
+.nav-links-2 {
+	text-decoration: none;
+	/* color: var(--black-color); */
+	color: var(--light-grey-color);
+	font-size: .9em;
+}
+.icon-logo {
+	display: inline-grid;
+	align-self: center;
+	width: 25px;
+	fill: var(--orange-color);
+}
+/**********************************************************************************************/
+/**************************************LANDING SECTION*****************************************/
+/**********************************************************************************************/
+
+.landing {
+	display: grid;
+	align-content: center;
+	height: 100%;
+	width: 100%;
+	background: url("../images/viabull-bg.jpg");
+	background-size: cover;
+}
+.landing-wrapper {
+	display: grid;
+	width: 80%;
+	grid-template-areas: 'cta logo';
+	grid-template-columns: 1fr 1fr;
+	justify-self: center;
+	justify-content: center;
+	justify-items: center;
+	align-content: center;
+	align-items: center;
+}
+.landing-wrapper div:nth-child(1){
+	display: block;
+	grid-area: cta;
+	grid-template-rows: auto;
+	width: 80%;
+}
+.landing-wrapper div:nth-child(2){
+	display: grid;
+	grid-area: logo;
+	width: 80%;
+}
+.landing-title {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.landing-links {
+	display: grid;
+	width: 100%;
+}
+.landing-logo {
+	display: grid;
+	width: 100%;
+}
+.two-cols{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	margin-bottom: 20px;
+}
+.cta-btns {
+	display: inline-grid;
+	width: 35px;
+	fill: var(--light-grey-color);
+	padding: 10px 0px;
+}
+.cta-btns-title {
+	display: inline-grid;
+	vertical-align: top;
+	padding: 15px 0px;
+	font-size: 1em;
+	padding-left: 10px;
+	color: var(--light-grey-color);
+	}
+
+.cta-btns-li:hover .cta-btns-title,.cta-btns-li:hover .cta-btns {
+	cursor: pointer;
+	color: var(--orange-color);
+	fill: var(--orange-color);
+}
+/**********************************************************************************************/
+/************************************** CTA SECTION  *****************************************/
+/**********************************************************************************************/
+
+/**********************************************************************************************/
+/*************************************  WHAT SECTION  *****************************************/
+/**********************************************************************************************/
+
+/**********************************************************************************************/
+/************************************** WHY SECTION *******************************************/
+/**********************************************************************************************/
+
+/**********************************************************************************************/
+/************************************** MEDIA QUERY *******************************************/
+/**********************************************************************************************/
+
+/**********************************************************************************************/
+/***************************************** LOGIN  *********************************************/
+/**********************************************************************************************/
+.login-drop-down {
+	display: grid;
+	position: fixed;
+	background: var(--dark-grey-color);
+	right: 2.5%;
+	margin-top: 30px;
+	height: 100px;
+	width: 200px;
+	z-index: 1;
+	box-shadow: inset 2px 1px 8px  rgba(0, 0, 0, 0.1);
+	border-top: 1px solid black;
+
+}
+.login-nav-btn {
+	display: grid;
+	justify-self: center;
+	margin-top: 10px;
+	width: 180px;
+	height: 30px;
+	text-decoration: none;
+	background: var(--orange-color);
+	text-align: center;
+	align-content: center;
+	color: var(--black-color);
+	font-weight: bold;
+	font-size: .9em;
+	box-shadow: inset 2px 1px 8px  rgba(0, 0, 0, 0.2);
+}
+.myaccount-ul {
+	display: grid;
+	justify-self: center;
+	justify-content: center;
+	list-style-type: none;
+	font-size: .8em;
+}
+.myaccount-li {
+	display: grid;
+	border-top: 1px solid rgb(0, 0, 0, .5);
+	width: 200px;
+	text-align: left;
+	font-weight: 300;
+	padding: 5px 10px;
+}
+.myaccount-links {
+	text-decoration: none;
+	color: var(--orange-color);
+}
+@media only screen and (max-width: 1355px) {
+	.landing-wrapper {
+		width: 75%;
+	}
+}
+@media only screen and (max-width: 1105px) {
+	.page-changer:hover ~ .page-change-title{
+		display: none;
+	}
+}
+@media only screen and (max-width: 900px) {
+	:root {
+		--blue: rgb(24, 171, 255);
+		--full-width: 100%;
+		--content-width: 80%;
+		--one-column: 1fr;
+		--one-one-columns: 1fr;
+		--one-one-one-columns: 1fr 1fr 1fr;
+		--one-one-one-one-columns: 1fr 1fr 1fr 1fr;
+		--one-two-columns: 1fr 2fr;
+		--one-three-columns: 1fr 3fr;
+		--two-three-columns: 2fr 3fr;
+		--three-two-columns: 3fr 2fr;
+		--three-one-columns: 3fr 1fr;
+		--black-color: rgb(0, 0, 0);
+		--dark-grey-color: rgb(13, 13, 13);
+		--light-grey-color: rgb(156, 156, 156);
+		--background-two: rgb(255, 255, 255);
+		--orange-color: rgb(240, 88, 41);
+		--white-color: rgb(255, 255, 255);
+		--width-set-one: 80%;
+	  }
+	  .landing-wrapper {
+		display: grid;
+		width: 85%;
+		grid-template-areas: 'logo' 'cta';
+		grid-template-columns: 1fr;
+		justify-self: center;
+		justify-content: center;
+		justify-items: center;
+		align-content: center;
+		align-items: center;
+	}
+	.landing-wrapper div:nth-child(1){
+		display: block;
+		width: 100%;
+	}
+	.landing-wrapper div:nth-child(2){
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.page-scroll {
+		display: none;
+		align-items: center;
+		margin-left: 2.5%;
+		position: fixed;
+		height: calc(100vh + 65px);
+		color: white;
+	}
+}
+@media only screen and (max-width: 478px) {
+	nav {
+		height: 50px;
+	}
+}
