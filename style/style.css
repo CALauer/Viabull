@@ -116,40 +116,48 @@ nav {
 	display: grid;
 	grid-template-columns: var(--three-two-columns);
 	width: 95%;
+	height: 30px;
 	justify-self: center;
+}
+.nav-wrapper div:nth-child(1){
+	display: grid;
+	justify-content: left;
 }
 .nav-wrapper div:nth-child(2){
 	display: grid;
 	justify-content: right;
 }
 .nav-ul {
-	display: inline-block;
-	height: 100%;
+	display: block;
+	height: 30px;
 }
 .nav-li {
-	display: inline-grid;
-	height: 100%;
-	align-content: center;
-	vertical-align: middle;
+	display: inline-flex;
+	height: 30px;
 	padding-right: 20px;
+	vertical-align: middle;
 }
 .nav-links {
+	display: grid;
 	text-decoration: none;
 	/* color: var(--black-color); */
 	color: var(--light-grey-color);
 	font-size: .9em;
 	font-weight: bold;
+	align-self: center;
 }
 .nav-links-2 {
+	display: grid;
 	text-decoration: none;
 	/* color: var(--black-color); */
 	color: var(--light-grey-color);
 	font-size: .9em;
+	align-self: center;
 }
 .icon-logo {
-	display: inline-grid;
+	display: grid;
 	align-self: center;
-	width: 25px;
+	width: 28px;
 	fill: var(--orange-color);
 }
 /**********************************************************************************************/
