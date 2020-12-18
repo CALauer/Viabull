@@ -3,6 +3,7 @@
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: 'Karla', sans-serif;
+	color: white;
   }
   :root {
 	--blue: rgb(24, 171, 255);
@@ -56,6 +57,9 @@ li {
 	text-indent: 15px;
 	color: var(--light-grey-color);
 	font-size: .9em;
+}
+.bold {
+	font-weight: bolder;
 }
 .github-icon {
 	display: grid;
@@ -160,6 +164,10 @@ nav {
 	width: 28px;
 	fill: var(--orange-color);
 }
+.icon-logo:hover {
+	fill: var(--white-color);
+	cursor: pointer;
+}
 /**********************************************************************************************/
 /**************************************LANDING SECTION*****************************************/
 /**********************************************************************************************/
@@ -257,7 +265,7 @@ nav {
 	justify-items: center;
 	height: 100vh;
 	width: 100%;
-	margin-top: 50px;
+	padding-top: 50px;
 	background: url("../images/viabull-bg.jpg");
 	background-size: cover;
 }
@@ -353,6 +361,121 @@ input[type="text"]:focus {
 	text-decoration: none;
 	color: var(--orange-color);
 }
+/**********************************************************************************************/
+/****************************************** API  **********************************************/
+/**********************************************************************************************/
+.api-main {
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	align-content: flex-start;
+	height: 100vh;
+	width: 100%;
+	padding-top: 60px;
+	background: url("../images/viabull-bg.jpg");
+	background-size: cover;
+}
+.api-wrapper {
+	display: grid;
+	width: 95%;
+	justify-self: center;
+	justify-content: center;
+	justify-items: center;
+	align-self: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.api-request-btn {
+	display: grid;
+	justify-self: left;
+	background-color: var(--orange-color);
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	width: 120px;
+}
+.api-table {
+	display: grid;
+	width: 90%;
+	font-weight: lighter;
+	font-size: .9em;
+	border-collapse: collapse;
+	overflow-x: auto;
+}
+.table-wrapper {
+	
+}
+.img-25 {
+	width: 25%;
+}
+th {
+	text-align: left;
+	font-weight: bold;
+	color: var(--orange-color);
+	padding: 5px;
+}
+tr {
+	background: black;
+}
+tr:nth-child(even) {
+	background: rgb(44, 44, 44);
+	padding: 5px;
+}
+.api-table tr.data:hover {
+	background: var(--orange-color);
+}
+
+td {
+	padding: 5px;
+	border: none;
+}
+
+.api-open {
+	color: yellow;
+}
+.api-close {
+	color: red;
+}
+.api-lowest {
+	color: var(--orange-color);
+}
+.api-high {
+	color: green;
+}
+.api-vol {
+	color: var(--light-grey-color);
+}
+
+.table-info {
+	display: grid;
+	grid-template-columns: var(--two-three-columns);
+	align-content: flex-start;
+	justify-self: center;
+	justify-items: center;
+	justify-content: center;
+	width: 95%;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.table-info div:nth-child() {
+	justify-self: center;
+	padding: 0% 5%;
+	width: 100%;
+}
+.table-info div:nth-child(2) {
+	justify-self: center;
+	padding: 0% 5%;
+	width: 100%;
+}
+td.pages:hover {
+	background: none;
+
+}
+.stock-link {
+	color: var(--orange-color);
+}
 @media only screen and (max-width: 1355px) {
 	.landing-wrapper {
 		width: 75%;
@@ -361,6 +484,10 @@ input[type="text"]:focus {
 @media only screen and (max-width: 1105px) {
 	.page-changer:hover ~ .page-change-title{
 		display: none;
+	}
+	.table-info {
+		grid-template-columns: var(--one-column);
+		padding-top: 50px;
 	}
 }
 @media only screen and (max-width: 900px) {
@@ -414,8 +541,38 @@ input[type="text"]:focus {
 		color: white;
 	}
 }
+
+.table-info div:nth-child(1) {
+	width: 85%;
+}
+
 @media only screen and (max-width: 478px) {
 	nav {
 		height: 50px;
+	}
+	.api-table {
+		width: 100vw;
+		justify-self: left;
+		background: red;
+	}
+	.table-info {
+		justify-items: left;
+		justify-content: left;
+		padding: none;
+	}
+	.table-info div:nth-child(1) {
+		display: grid;
+		justify-self: center;
+		justify-content: left;
+		justify-items: left;
+		width: 98%;
+	}
+	.table-info div:nth-child(2) {
+		justify-self: left;
+		width: 98%;
+		padding: 0%;
+	}
+	.api-request-btn {
+		text-align: center;
 	}
 }
