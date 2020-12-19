@@ -17,7 +17,8 @@ require "../includes/header.php";
                             <li>Fully Functioning Login System</li>
                             <li>Dynamic Profiles</li>
                             <li>Dynamically Created Content</li>
-                            <li>Database Infrastrcture</li>
+                            <li>API integration</li>
+                            <li>Integrated Stock Prices</li>
                         </ul>
 
                         <h2>Project Status</h2>
@@ -27,7 +28,7 @@ require "../includes/header.php";
                         
                         <h2>Upcoming Updates</h2>
                         <ul>
-                            <li>Database Implementation</li>
+                            <li><s>Database Implementation</s></li>
                             <li>Mobile Menu</li>
                             <li>Responsiveness Updates</li>
                             <li>Section Additions</li>
@@ -50,6 +51,13 @@ require "../includes/header.php";
                 </div>
                 <div>
                     <img src="../images/viabull-lndg.svg" alt="landing-logo" class="landing-logo">
+                    <table class="updates">
+                        <tr><th>Date</th><th>Title</th><th>Desicription</th><th>status</th></tr>
+                        <tr><td>12/16/20</td><td>Project Start</td><td>Project added to GitHub and Website</td><td>Ongoing</td></tr>
+                        <tr><td>12/17/20</td><td>Update</td><td>Integraton of TwelveData API</td><td>Ongoing</td></tr>
+                        <tr><td>12/18/20</td><td>Update</td><td>Added Mobile Menu</td><td>90%</td></tr>
+                        <tr><td>12/18/20</td><td>Update</td><td>Color Adjustments</td><td>TBD</td></tr>
+                    </table>
                 </div>
             </div>
         </section>

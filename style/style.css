@@ -22,7 +22,9 @@
 	--dark-grey-color: rgb(13, 13, 13);
 	--light-grey-color: rgb(156, 156, 156);
 	--background-two: rgb(255, 255, 255);
-	--orange-color: rgb(240, 88, 41);
+	--orange-color: rgb(255, 125, 86);
+	--orange-color-two: rgba(255, 125, 86, .5);
+	--orange-color-three: rgb(240, 88, 41);
 	--white-color: rgb(255, 255, 255);
 	--width-set-one: 80%;
   }
@@ -60,6 +62,9 @@ li {
 }
 .bold {
 	font-weight: bolder;
+}
+.orange {
+	color: var(--orange-color);
 }
 .github-icon {
 	display: grid;
@@ -135,10 +140,17 @@ nav {
 	display: block;
 	height: 30px;
 }
+
 .nav-li {
 	display: inline-flex;
 	height: 30px;
 	padding-right: 20px;
+	vertical-align: middle;
+}
+.nav-li-2 {
+	display: inline-flex;
+	height: 30px;
+	padding-left: 20px;
 	vertical-align: middle;
 }
 .nav-links {
@@ -150,7 +162,10 @@ nav {
 	font-weight: bold;
 	align-self: center;
 }
-.nav-links-2 {
+.nav-links:hover, .nav-links-2:hover {
+	color: var(--white-color)
+}
+.nav-links-2{
 	display: grid;
 	text-decoration: none;
 	/* color: var(--black-color); */
@@ -158,6 +173,7 @@ nav {
 	font-size: .9em;
 	align-self: center;
 }
+
 .icon-logo {
 	display: grid;
 	align-self: center;
@@ -257,9 +273,9 @@ nav {
 /**********************************************************************************************/
 
 /**********************************************************************************************/
-/***************************************** LOGIN  *********************************************/
+/***************************************** LOGIN / Register  *********************************************/
 /**********************************************************************************************/
-.login {
+.login, .register {
 	display: grid;
 	justify-content: center;
 	justify-items: center;
@@ -269,55 +285,71 @@ nav {
 	background: url("../images/viabull-bg.jpg");
 	background-size: cover;
 }
-.login-wrapper {
+.login-wrapper, .register-wrapper {
 	display: grid;
-	width: 30%;
-	padding: 50px;
+	grid-template-columns: var(--one-column);
 	justify-self: center;
 	justify-content: center;
 	align-self: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
 }
-.login-form {
+.login-form, .register-form {
 	display: grid;
-	margin-top: 40px;
+	width: 100%;
+	margin-top: 100px;
 	justify-self: center;
+	background: rgba(7, 7, 7, 0.5);
+	padding: 30px;
+	box-shadow: inset 1px 1x 16px black;
+	border: 1px solid var(--orange-color-two);
 }
-input[type="text"], input[type="password"] {
+
+input[type="text"], input[type="password"], input[type="email"] {
 	border: none;
 	height: 35px;
+	width: 100%;
 	margin: 10px 0px;
 	border-radius: 2px;
-	border: solid .5px var(--orange-color);
-	background:rgb(28, 7, 1);;
+	border: none;
+	background:rgb(14, 7, 0);;
 	font-size: 1.1em;
 	padding: 5px;
 	color: var(--light-grey-color);
 }
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="password"]:focus {
+	border: solid .5px var(--orange-color);
 	outline: none;
-	border: none;
 }
-.login-submit-btn {
+.login-submit-btn, .register-submit-btn {
 	display: grid;
 	background: var(--orange-color);
 	border: none;
+	margin-top: 40px;
 	height: 35px;
 	font-size: 1.1em;
 	align-content: center;
 	color: white;
 	box-shadow: inset 0px 0px 8px rgba(255, 255, 255, .2 );
 }
+.login-submit-btn:hover, .register-submit-btn:hover {
+	cursor: pointer;
+	background: rgb(240, 88, 41);
+	border: none;
+	margin-top: 40px;
+	height: 35px;
+	font-size: 1.1em;
+	align-content: center;
+	color: white;
+}
 .login-drop-down {
 	display: none;
 	position: fixed;
+	padding: 0px;
 	background: var(--dark-grey-color);
 	right: 2.5%;
-	height: 100px;
 	width: 200px;
 	z-index: 1;
-	box-shadow: inset 2px 1px 8px  rgba(0, 0, 0, 0.1);
 	border-top: 1px solid black;
 
 }
@@ -330,7 +362,8 @@ input[type="text"]:focus {
 .login-nav-btn {
 	display: grid;
 	justify-self: center;
-	margin-top: 10px;
+	align-self: flex-start;
+	margin: 10px 0px;
 	width: 180px;
 	height: 30px;
 	text-decoration: none;
@@ -341,13 +374,20 @@ input[type="text"]:focus {
 	font-weight: bold;
 	font-size: .9em;
 	box-shadow: inset 2px 1px 8px  rgba(0, 0, 0, 0.2);
+	transition: ease-in-out 400ms;
+}
+.login-nav-btn:hover {
+	background: rgb(240, 88, 41);
 }
 .myaccount-ul {
 	display: grid;
-	justify-self: center;
+	justify-self: left;
 	justify-content: center;
 	list-style-type: none;
+	align-content: flex-start;
 	font-size: .8em;
+	padding: 0px;
+	margin: 0px;
 }
 .myaccount-li {
 	display: grid;
@@ -355,11 +395,43 @@ input[type="text"]:focus {
 	width: 200px;
 	text-align: left;
 	font-weight: 300;
-	padding: 5px 10px;
+	padding: 6px 0px;
 }
 .myaccount-links {
 	text-decoration: none;
 	color: var(--orange-color);
+}
+.myaccount-links:hover {
+	text-decoration: none;
+	color: var(--orange-color-three);
+}
+.form-questions-p {
+	margin-top: 10px;
+	font-size: .9em;
+	color: white;
+}
+.form-questions-a{
+	display: inline-grid;
+	margin-top: 10px;
+	font-size: .9em;
+	text-decoration: none;
+	color: var(--light-grey-color);
+}
+.form-questions-a:hover {
+	margin-top: 10px;
+	font-size: .9em;
+	color: var(--orange-color);
+}
+.form-logo {
+	display: grid;
+	justify-self: center;
+	width: 50%;
+	padding-bottom: 40px;
+}
+.helper {
+	display: inline-grid;
+	color: var(--orange-color-three);
+	width: 100%;
 }
 /**********************************************************************************************/
 /****************************************** API  **********************************************/
@@ -476,6 +548,113 @@ td.pages:hover {
 .stock-link {
 	color: var(--orange-color);
 }
+/**********************************************************************************************/
+/**************************************** UPDATES  ********************************************/
+/**********************************************************************************************/
+.updates {
+	padding-top: 50px;
+}
+/**********************************************************************************************/
+/************************************** MOBILE MENU  ******************************************/
+/**********************************************************************************************/
+.mobile-nav-wrapper {
+	display: none;
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	background: var(--dark-grey-color);
+}
+.mobile-menu {
+	display: none;
+}
+/**********************************************************************************************/
+/************************************** Profile Page  *****************************************/
+/**********************************************************************************************/
+.profile {
+	display: grid;
+}
+.profile-wrapper {
+	display: grid;
+	justify-self: center;
+	grid-template-columns: var(--one-three-columns);
+	padding-top: 150px;
+	width: 95%;
+}
+.profile-left {
+	display: grid;
+	align-content: flex-start;
+	width: 75%;
+}
+.profile-right-one-column {
+	display: grid;
+	align-content: flex-start;
+	gap: 30px;
+	width: 100%;
+	margin-top: 30px;
+}
+.profile-right-two-columns {
+	display: grid;
+	grid-template-columns: var(--one-one-columns);
+	align-content: flex-start;
+	gap: 30px;
+	width: 100%;
+}
+.profile-right-two-columns div, .profile-right-one-column div {
+	display: grid;
+	background: rgba(150, 150, 150, 0.1);
+	align-content: flex-start;
+	border: 1px solid var(--orange-color-two);
+}
+
+.profile-actions {
+	display: grid;
+	background: var(--dark-grey-color);
+	height: 30px;
+	padding: 30px;
+	align-content: center;
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+}
+.profile-actions-active {
+	display: grid;
+	padding: 30px;
+	background: var(--orange-color);
+	height: 30px;
+	align-content: center;
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	border-left: 4px solid var(--orange-color-three);
+}
+.profile-actions:hover {
+	display: grid;
+	background: var(--orange-color-three);
+	height: 30px;
+	padding: 30px;
+	align-content: center;
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+}
+.profile-info-table {
+	background: transparent;
+}
+.profile-info-table tr{
+	background: none;
+}
+.profile-sub {
+	color: var(--light-grey-color);
+}
+.profile-div-head {
+	display: grid;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin: 0px;
+}
 @media only screen and (max-width: 1355px) {
 	.landing-wrapper {
 		width: 75%;
@@ -541,9 +720,80 @@ td.pages:hover {
 		color: white;
 	}
 }
-
+.nav-wrapper {
+	display: grid;
+	grid-template-columns: var(--three-one-columns);
+	width: 95%;
+	height: 30px;
+	justify-self: center;
+}
 .table-info div:nth-child(1) {
 	width: 85%;
+}
+
+@media only screen and (max-width: 800px) {
+nav {
+	display: none;
+}
+.mobile-menu {
+	display: none;
+	top: -100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-top: 40px;
+	background: rgb(13, 13, 13, .8)
+}
+.mobile-links {
+	display: grid;
+	text-align: right;
+	padding-right: 1%;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 0px;
+}
+.mobile-nav-wrapper {
+	display: grid;
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	background: var(--dark-grey-color);
+}
+.mobile-nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 98%;
+	justify-self: center;
+}
+.mobile-nav div:nth-child(2) {
+	display: grid;
+	justify-content: right;
+	justify-items: right;
+	width: 100%;
+}
+.mobile-nav-li {
+	display: inline-flex;
+	height: 30px;
+icon	vertical-align: middle;
+}
+.mobile-nav-link {
+	display: grid;
+	margin: 0;
+	width: 28px;
+	fill: var(--orange-color);
+}
+.mobile-icon-logo {
+	display: grid;
+	justify-self: left;
+	width: 40px;
+	padding-top: 10px;
+	fill: var(--orange-color);
+}
+.mobile-icon-btn {
+	display: grid;
+	justify-self: right;
+	width: 40px;
+	padding-top: 10px;
 }
 
 @media only screen and (max-width: 478px) {

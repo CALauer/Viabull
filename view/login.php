@@ -4,13 +4,34 @@ require "../includes/header.php";
 ?>
     <section class="login">
         <div class="login-wrapper">
-            <img src="../images/viabull-lndg.svg" alt="viabull-logo">
-            <form action="submit" class="login-form">
-                <input type="text" placeholder="Email or Username">
-                <input type="password"  placeholder="Password">
-                <button type="" class="login-submit-btn" action="">Log In</button>
+            <form action="../includes/login_inc.php" class="login-form" method="post">
+            <img src="../images/viabull-lndg.svg" alt="viabull-logo" class="form-logo">
+            <?php 
+                if (isset($_GET['error'])) {
+                    if ($_GET['error'] == "RegistrationSuccess"){
+                    echo '<p class="helper_suc">You have successfully registered. You can now log in.</p>';                    
+                }
+                else if ($_GET['error'] == "EmptyFields"){
+                    echo '<p class="helper">Please fill in all fields</p>';
+                }
+                else if ($_GET['error'] == "wrongPassword="){
+                    echo '<p class="helper">You have entered a wrong password, please re-enter your password.
+                    </p>';
+                }
+                else if ($_GET['error'] == "noRegisteredUsers"){
+                    echo '<p class="helper">No users are registered with that email or username.
+                    </p>';
+                }
+            else if ($_GET['error'] == "RegistrationSuccess"){
+                echo '<p class="helper_suc">You have successfully registered. You can now log in.</p>';
+            }
+            }
+            ?>
+                <input type="text" placeholder="Email or Username" name="emailUsername">
+                <input type="password"  placeholder="Password" name="password">
+                <input type="submit" class="login-submit-btn" name="Login">
                 <p><br />
-                    <a href="" class="nav-links-2">Forgot Password?</a>  <a href="" class="nav-links-2">Nead an account?</a> 
+                    <a href="javascript:void(0)" class="form-questions-a" >Forgot Password?</a>  <a href="../view/register.php" class="form-questions-a">Nead an account?</a> 
                 </p>
             </form>
         </div>

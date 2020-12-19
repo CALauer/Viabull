@@ -11,7 +11,7 @@ $('#requestBtn').click('click', function() {
             const receievedData = this.responseText; 
             var data = JSON.parse(receievedData).data;
             for (i = 0; i < 100; i++) {
-                console.log(data[i].symbol);
+                // console.log(data[i].symbol);
                 string = '<td><a href="javascript:void(0)" class="stock-link" id=' + data[i].symbol + '>' + data[i].symbol + 
                 '</a></td><td>' + data[i].name + '</td>' +
                 '<td>' + data[i].currency + '</td>' +
@@ -29,16 +29,26 @@ $('#requestBtn').click('click', function() {
 // Actions
 $('#test').click('click', function() {
 	console.log("clicked");
-
 	let x = $('.login-drop-down');
-	console.log("clicked")
 	if (x.data('clicked', true) ) {
-		x.fadeToggle(200).delay( 100 ).css({display: 'inline-grid', top: 30})
+		x.fadeToggle(200).delay( 100 ).css({display: 'inline-grid', top: 30});
 		}
 	});
 });
+$('#mobile-account-btn').click('click', function() {
+	let x = $('.login-drop-down');
+	if (x.data('clicked', true) ) {
+		x.fadeToggle(200).delay( 100 ).css({display: 'grid', top: 40, alignContent: 'flex-start'});
+		}
+	});
 $('#go-home').click('click', function() {
 	window.location.href = "../view/index.php";
-	console.log("clicked");
+	});
+// Mobile Navigation
 
+$('#mobile-menu-btn').click('click', function() {
+	let x = $('.mobile-menu');
+	if (x.data('clicked', true) ) {
+		x.fadeToggle(200).delay( 100 ).css({display: 'inline-grid', top: 0});
+		}
 	});

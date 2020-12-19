@@ -1,4 +1,5 @@
 <?php 
+
 if(isset($_POST['Register'])) {
     
     require 'config.php';
@@ -59,7 +60,7 @@ if(isset($_POST['Register'])) {
             
             mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPass);
             mysqli_stmt_execute($stmt);
-            header("Location: ../view/register.php?error=RegistrationSuccess");
+            header("Location: ../view/login.php?error=RegistrationSuccess");
             exit();
                 }       
             }   
