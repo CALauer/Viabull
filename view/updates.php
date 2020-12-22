@@ -12,7 +12,15 @@ require "../includes/header.php";
                         <h1>Project Details</h1>
                         <p>
                             So this is one of my main designs, so I figured I would go all out with it and make it somewhat official, from a mobile design to full implementation. 
-                        </p>
+                        Viabull is a fake trading application. Outside of Jquery, this site is made 100% from scratch, just like the rest of the sites you will see on my profile.
+                    Including all images, all icons and buttons.</p>
+                        <h2>Languages and Libraries</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript/Jquery</li>
+                            <li>PHP</li>
+                        </ul>
                         <h2>What you can expect</h2>
                         <ul>
                             <li><s>Fully Functioning Registration System</s></li>

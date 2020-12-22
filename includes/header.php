@@ -34,7 +34,7 @@ session_start();
                               </g></g>
                           </svg>
                       </li>
-                      <li class="nav-li"><a href="../view/updates.php" class="nav-links">News</a></li>
+                      <li class="nav-li"><a href="../view/updates.php" class="nav-links">Project Info</a></li>
                       <li class="nav-li"><a href="stocks.php" class="nav-links">Stocks</a></li>
                       <li class="nav-li"><a href="javascript:void(0)" class="nav-links">Download</a></li>
                       <li class="nav-li"><a href="../../../view/index.html" class="nav-links">Back to portfolio</a></li>
@@ -81,7 +81,7 @@ session_start();
         <div class="mobile-menu">
             <ul>
                 <li><a href="../view/index.php" class="mobile-links">Home</a></li>
-                <li><a href="../view/updates.php" class="mobile-links">News</a></li>
+                <li><a href="../view/updates.php" class="mobile-links">Project Info</a></li>
                 <li><a href="../view/stocks.php" class="mobile-links">Stocks</a></li>
                 <li><a href="javascript:void(0)" class="mobile-links">Download</a></li>
                 <li><a href="../../../view/index.html" class="mobile-links">Back to Portfolio</a></li>
@@ -112,7 +112,7 @@ session_start();
                           </g></g>
                       </svg>
                   </li>
-                  <li class="nav-li"><a href="../view/updates.php" class="nav-links">News</a></li>
+                  <li class="nav-li"><a href="../view/updates.php" class="nav-links">Project Info</a></li>
                   <li class="nav-li"><a href="stocks.php" class="nav-links">Stocks</a></li>
                   <li class="nav-li"><a href="javascript:void(0)" class="nav-links">Download</a></li>
                   <li class="nav-li"><a href="../../../view/index.html" class="nav-links">Back to portfolio</a></li>
@@ -159,7 +159,7 @@ session_start();
     <div class="mobile-menu">
         <ul>
             <li><a href="../view/index.php" class="mobile-links">Home</a></li>
-            <li><a href="../view/updates.php" class="mobile-links">News</a></li>
+            <li><a href="../view/updates.php" class="mobile-links">Project Info</a></li>
             <li><a href="../view/stocks.php" class="mobile-links">Stocks</a></li>
             <li><a href="javascript:void(0)" class="mobile-links">Download</a></li>
             <li><a href="../../../view/index.html" class="mobile-links">Back to Portfolio</a></li>
@@ -170,6 +170,7 @@ session_start();
 <ul class="myaccount-ul">
 <li class="myaccount-li"><a href="" class="myaccount-links"> Account Settings</a></li>
 <li class="myaccount-li"><a href="../view/register.php" class="myaccount-links"> Create a free account</a></li>
+
 <li>
 </ul>
 </div>';} ?>

@@ -30,7 +30,7 @@ require "../includes/header.php";
                                             <path d="M32,19.7A13.8,13.8,0,0,1,18.6,29.8,13.9,13.9,0,0,1,5.2,19.7h-2A16.1,16.1,0,0,0,18.6,31.8,15.9,15.9,0,0,0,34,19.7Z" />
                                             <polygon points="8.7 19.8 0 19.8 4.4 15.4 8.7 19.8" /><polygon points="28.7 12 37.4 12 33 16.4 28.7 12"  />
                                             <path d="M23.2,18.5c0,1.6-1.4,2.9-3.4,3.3v.9H17.5v-.9a4.1,4.1,0,0,1-3.2-2.5h2.4a1.6,1.6,0,0,0,.8.6,2.7,2.7,0,0,0,1.2.3,2,2,0,0,0,1.1-.3A1.7,1.7,0,0,0,21,18.5a2.1,2.1,0,0,0-2.3-1.8,5.6,5.6,0,0,1-3-.8,3.3,3.3,0,0,1-1.6-2.6c0-1.6,1.5-3,3.4-3.3V9.1h2.3V10a4.1,4.1,0,0,1,3.3,2.4H20.6a1.7,1.7,0,0,0-.8-.6,2,2,0,0,0-1.1-.2,2.5,2.5,0,0,0-1.2.2,1.7,1.7,0,0,0-1.1,1.5c0,.9,1,1.7,2.3,1.7a5.1,5.1,0,0,1,3,.9A3.1,3.1,0,0,1,23.2,18.5Z" /></g></g></svg>
-                                            <span class="cta-btns-title">Start Investing</span>
+                                            <span class="cta-btns-title" id="cta-start-investing">Start Investing</span>
                             </li>
                         </ul>
                     </div>
@@ -42,14 +42,97 @@ require "../includes/header.php";
         </section>
       </main>
       <section class="what-section">
-          <h1>What is viabull?</h1>
+          <div class="what-wrapper">
+              <div>
+              <img src="../images/viabull1.png" alt="" class="img-50">
+
+          </div>
+          <div>
+          <h2>Trade, Track, and Invest</h2>
+              <p>Open a brokerage account today and get <span class="orange-three">3 FREE</span> random stocks.</p>
+              <p>You will receive your free stocks once your credentials are verified. No deposits necessary. </p>
+            <a href="javascript:void(0)" class="big-btn">Open a free account</a>
+            </div>
+          </div>
       </section>
       <section class="why-section">
-        <h1>Why choose viabull?</h1>
+        <div class="why-wrapper">
+            <div>
+                <h2>Here's why...</h2>
+                    <p>Our tracking tools are specifically designed to make your trades, research, and investment experience 
+                        the absolute best.
+                    </p>
+                    <p>
+                        <ul>
+                        <li>Real Time Tracking</li>
+                        <li>User Friendly Interface</li>
+                        <li>Advanced Tracking Technology</li>
+                        <li>0% Commission Trades</li>
+                        <li>No Annual or Hidden Fees</li>
+                        <li>Beginners Mode</li>
+                        <li>Advanced Mode</li>
+                        <li>Fractional Shares</li>
+                        <li>Reduced withdrawl fees</li>
+                        </ul>
+                    </p>
+                    <h2>Nothing to lose and everything to gain</h2>
+                    <p>Even if you don't deposit any money, your going to get a 3 free stocks! So start now! Limited time offer.</p>
+                    <ul>
+                        <li class="cta-btns-li">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.4 31.8" class="cta-btns">
+                            <g id="e2326c92-f119-4d62-9baf-f6e6b45d161b" data-name="Layer 2">
+                            <g id="a950ded7-4924-4b48-9f78-2ec1395fa7d4" data-name="Layer 2">
+                            <path d="M5.2,12A14.1,14.1,0,0,1,18.6,1.9,13.9,13.9,0,0,1,32,12h2A15.8,15.8,0,0,0,18.6,0,16,16,0,0,0,3.2,12Z" />
+                            <path d="M32,19.7A13.8,13.8,0,0,1,18.6,29.8,13.9,13.9,0,0,1,5.2,19.7h-2A16.1,16.1,0,0,0,18.6,31.8,15.9,15.9,0,0,0,34,19.7Z" />
+                            <polygon points="8.7 19.8 0 19.8 4.4 15.4 8.7 19.8" /><polygon points="28.7 12 37.4 12 33 16.4 28.7 12"  />
+                            <path d="M23.2,18.5c0,1.6-1.4,2.9-3.4,3.3v.9H17.5v-.9a4.1,4.1,0,0,1-3.2-2.5h2.4a1.6,1.6,0,0,0,.8.6,2.7,2.7,0,0,0,1.2.3,2,2,0,0,0,1.1-.3A1.7,1.7,0,0,0,21,18.5a2.1,2.1,0,0,0-2.3-1.8,5.6,5.6,0,0,1-3-.8,3.3,3.3,0,0,1-1.6-2.6c0-1.6,1.5-3,3.4-3.3V9.1h2.3V10a4.1,4.1,0,0,1,3.3,2.4H20.6a1.7,1.7,0,0,0-.8-.6,2,2,0,0,0-1.1-.2,2.5,2.5,0,0,0-1.2.2,1.7,1.7,0,0,0-1.1,1.5c0,.9,1,1.7,2.3,1.7a5.1,5.1,0,0,1,3,.9A3.1,3.1,0,0,1,23.2,18.5Z" /></g></g></svg>
+                            <span class="cta-btns-title" id="cta-start-investing">Start Investing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+            <!-- <h2></h2> -->
+                </div>
+        </div>
+        
     </section>
-    <section class="market-section">
-        <h1>Possible API here</h1>
+    <section class="why-section-two">
+        <div class="why-wrapper-two">
+            <div>
+
+            </div>
+            <div>
+                <h2>Wait...there's more</h2>   
+                <p>Not only can you trade and invest, there's no limitations on what you can invest in</p>      
+                <ul>
+                <li class="cta-btns-li">Stocks</li>
+                <li class="cta-btns-li">ETF's</li>
+                <li class="cta-btns-li">Cryptos</li>
+                <li class="cta-btns-li">Gold</li>
+                <li class="cta-btns-li">Options</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Viabull Trading Game</h2>
+                <p>Members also have exclusive access to our custom made, Viabull Trading Game</p>
+                <p>Currently this game is not working, but if you're the type of person that 
+                    likes a game with an economy, you like to risk it for the biscuit, or maybe 
+                    you like slow and steady growth? Well, this is the game for you.
+                </p>
+                <p>Similar to paper trading with a Viabull twist.</p>
+                <h3>Features</h3>
+                    <ul>
+                    <li>Real time trading</li>
+                    <li>Unqiue opportunities</li>
+                    <li>Weekly Rewards</li>
+                    <li>Tier System</li>
+                    <li>and more...</li>
+                    </ul>
+            </div>
+        </div>
+        
     </section>
+
   </body>
 
   <!-- Include the jQuery library -->

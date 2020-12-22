@@ -44,6 +44,9 @@ $('#mobile-account-btn').click('click', function() {
 $('#go-home').click('click', function() {
 	window.location.href = "../view/index.php";
 	});
+	$('#cta-start-investing').click('click', function() {
+		window.location.href = "../view/register.php";
+		});
 // Mobile Navigation
 
 $('#mobile-menu-btn').click('click', function() {
@@ -52,3 +55,4 @@ $('#mobile-menu-btn').click('click', function() {
 		x.fadeToggle(200).delay( 100 ).css({display: 'inline-grid', top: 0});
 		}
 	});
+	

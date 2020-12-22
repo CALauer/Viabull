@@ -40,16 +40,18 @@ h1 {
 	color: var(--orange-color);
 	padding-bottom: 10px;
 	font-weight: 600;
+	font-size: 2.2em;
 }
 h2 {
 	color: var(--orange-color);
 	padding-bottom: 10px;
-	font-size: 1.1em;
+	font-size: 1.8em;
 	font-weight: 500;
 }
 p {
 	color: white;
 	padding-bottom: 20px;
+	font-size: 1.2em;
 }
 ul {
 	list-style-type: none;
@@ -58,13 +60,19 @@ ul {
 li {
 	text-indent: 15px;
 	color: var(--light-grey-color);
-	font-size: .9em;
+	font-size: 1em;
 }
 .bold {
 	font-weight: bolder;
 }
 .orange {
 	color: var(--orange-color);
+}
+.orange-two {
+	color: var(--orange-color-two);
+}
+.orange-three {
+	color: var(--orange-color-three);
 }
 .github-icon {
 	display: grid;
@@ -263,11 +271,61 @@ nav {
 /**********************************************************************************************/
 /*************************************  WHAT SECTION  *****************************************/
 /**********************************************************************************************/
+.what-section {
+display: grid;
+margin-top: 150px;
+}
+.what-wrapper {
+	display: grid;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	width: 80%;
+	grid-template-columns: var(--one-one-columns);
+	justify-self: center;
+}
+.big-btn {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	width: 200px;
+	height: 30px;
+	background: var(--orange-color-three);
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+	border-radius: 5px;;
 
+}
 /**********************************************************************************************/
 /************************************** WHY SECTION *******************************************/
 /**********************************************************************************************/
-
+.why-section, .why-section-two {
+	display: grid;
+	margin-top: 150px;
+	}
+	
+.why-wrapper {
+	display: grid;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	justify-self: center;
+	width: 80%;
+	grid-template-columns: var(--one-one-columns);
+	justify-self: center;
+}
+.why-wrapper-two {
+	display: grid;
+	align-content: center;
+	align-items: center;
+	justify-self: center;
+	width: 80%;
+	grid-template-columns: var(--one-one-columns);
+	justify-self: center;
+}
 /**********************************************************************************************/
 /************************************** MEDIA QUERY *******************************************/
 /**********************************************************************************************/
@@ -277,15 +335,13 @@ nav {
 /**********************************************************************************************/
 .login, .register {
 	display: grid;
-	justify-content: center;
-	justify-items: center;
 	height: 100vh;
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 150px;
 	background: url("../images/viabull-bg.jpg");
 	background-size: cover;
 }
-.login-wrapper, .register-wrapper {
+.login-wrapper {
 	display: grid;
 	grid-template-columns: var(--one-column);
 	justify-self: center;
@@ -297,14 +353,24 @@ nav {
 .login-form, .register-form {
 	display: grid;
 	width: 100%;
-	margin-top: 100px;
 	justify-self: center;
 	background: rgba(7, 7, 7, 0.5);
 	padding: 30px;
 	box-shadow: inset 1px 1x 16px black;
 	border: 1px solid var(--orange-color-two);
 }
-
+.register-wrapper {
+	display: grid;
+	grid-template-columns: var(--one-one-columns);
+	justify-self: center;
+	justify-content: center;
+	justify-items: center;
+	align-self: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	width: 60%;
+	gap: 50px;
+}
 input[type="text"], input[type="password"], input[type="email"] {
 	border: none;
 	height: 35px;
@@ -480,6 +546,9 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 .img-25 {
 	width: 25%;
+}
+.img-50 {
+	width: 50%;
 }
 th {
 	text-align: left;
@@ -696,6 +765,16 @@ td.pages:hover {
 		grid-template-columns: var(--one-column);
 		padding-top: 50px;
 	}
+	.register-wrapper {
+		display: grid;
+		grid-template-columns: var(--one-one-columns);
+		justify-self: center;
+		justify-content: center;
+		justify-items: center;
+		align-self: flex-start;
+		align-items: flex-start;
+		align-content: flex-start;
+	}
 }
 @media only screen and (max-width: 900px) {
 	:root {
@@ -802,7 +881,6 @@ nav {
 .mobile-nav-li {
 	display: inline-flex;
 	height: 30px;
-icon	vertical-align: middle;
 }
 .mobile-nav-link {
 	display: grid;

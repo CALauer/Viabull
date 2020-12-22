@@ -26,14 +26,14 @@ if(isset($_POST['Login'])) {
         if ($row = mysqli_fetch_assoc($result)) {
             $passwordCheck = password_verify($password, $row['password']);
             if ($passwordCheck == false) {
-                    header ('Location: ../view/login.php?error=wrongPassword='.$emailPassword);
+                    header ('Location: ../view/profile.php?error=wrongPassword='.$emailPassword);
                     exit();
                 }
                 else if ($passwordCheck == true) {
                     session_start();
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
-                    header ('Location: ../view/index.php?login=success');
+                    header ('Location: ../view/profile.php?id='.$row["id"].'');
                     exit();
                 } 
             }

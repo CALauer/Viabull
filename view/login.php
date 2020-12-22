@@ -6,6 +6,7 @@ require "../includes/header.php";
         <div class="login-wrapper">
             <form action="../includes/login_inc.php" class="login-form" method="post">
             <img src="../images/viabull-lndg.svg" alt="viabull-logo" class="form-logo">
+            <p>To test some of the features, login under username "test", password "test"</p>
             <?php 
                 if (isset($_GET['error'])) {
                     if ($_GET['error'] == "RegistrationSuccess"){
@@ -37,11 +38,11 @@ require "../includes/header.php";
         </div>
         <div class="login-bottom">
            <ul>
+            <!-- <li class="nav-li">Test</li>
             <li class="nav-li">Test</li>
             <li class="nav-li">Test</li>
             <li class="nav-li">Test</li>
-            <li class="nav-li">Test</li>
-            <li class="nav-li">Test</li>
+            <li class="nav-li">Test</li> -->
         </ul>
         <p>©2020 LAUER WEB DESIGN. ALL RIGHTS RESERVED.</p>
         </div>
