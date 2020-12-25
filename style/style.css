@@ -383,7 +383,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 	padding: 5px;
 	color: var(--light-grey-color);
 }
-input[type="text"]:focus, input[type="password"]:focus {
+input[type="text"]:focus, input[type="password"]:focus,input[type="email"]:focus, input[type="tel"]:focus  {
 	border: solid .5px var(--orange-color);
 	outline: none;
 }
@@ -523,26 +523,36 @@ input[type="text"]:focus, input[type="password"]:focus {
 	align-items: flex-start;
 	align-content: flex-start;
 }
-
-.api-request-btn {
+.one-column-div {
 	display: grid;
-	justify-self: left;
-	background-color: var(--orange-color);
-	padding: 10px;
-	text-align: center;
-	text-decoration: none;
-	width: 120px;
+	width: 100%;
+	justify-items: center;
 }
-.api-table {
+.two-column-div {
 	display: grid;
-	width: 90%;
-	font-weight: lighter;
-	font-size: .9em;
-	border-collapse: collapse;
-	overflow-x: auto;
+	grid-template-columns: var(--one-one-columns);
+	margin: 150px 0px;
+	width: 100%;
 }
-.table-wrapper {
-	
+.two-column-div > div:nth-child(1) {
+	display: grid;
+	align-content: flex-start;
+	justify-self: center;
+	justify-items: left;
+	justify-content: left;
+}
+.two-column-div > div:nth-child(2) {
+	display: grid;
+	align-content: flex-start;
+	justify-self: center;
+	justify-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+.sponsor {
+	font-size: .95em;
+	width: 80%;
+	line-height: 25px;
 }
 .img-25 {
 	width: 25%;
@@ -550,19 +560,14 @@ input[type="text"]:focus, input[type="password"]:focus {
 .img-50 {
 	width: 50%;
 }
-th {
-	text-align: left;
-	font-weight: bold;
-	color: var(--orange-color);
-	padding: 5px;
+.img-75 {
+	width: 75%;
+	margin-bottom: 150px;
 }
-tr {
-	background: black;
-}
-tr:nth-child(even) {
-	background: rgb(44, 44, 44);
-	padding: 5px;
-}
+.flex-start
+ {
+	 align-self: flex-start;
+ }
 .api-table tr.data:hover {
 	background: var(--orange-color);
 }
@@ -587,7 +592,9 @@ td {
 .api-vol {
 	color: var(--light-grey-color);
 }
-
+.search-results-table {
+	width: 90%;
+}
 .table-info {
 	display: grid;
 	grid-template-columns: var(--two-three-columns);
@@ -610,13 +617,65 @@ td {
 	padding: 0% 5%;
 	width: 100%;
 }
-td.pages:hover {
-	background: none;
 
-}
 .stock-link {
 	color: var(--orange-color);
 }
+
+input[type="search"] {
+	display: inline;
+	border: none;
+	height: 35px;
+	width: 100%;
+	margin: 10px 0px;
+	border-radius: 2px;
+	border: none;
+	background:rgb(51, 26, 0);;
+	font-size: 1.1em;
+	padding: 5px;
+	color: var(--white-color);
+}
+input[type="search"]:focus {
+	outline: none;
+}
+.search-input {
+	display: grid;
+}
+.search-btn {
+	display: grid;
+	height: 35px;
+	background: var(--orange-color-three);
+	width: max-content;
+	padding: 0px 20px;
+	margin: 10px 20px;
+	text-decoration: none;
+	align-content: center;
+	border-radius: 6px;
+}
+.addTo-btn {
+	background: rgb(24, 255, 120);
+	border: none;
+	padding: 5px;
+	transition: ease-in-out 200ms;
+	color: black;
+
+}
+.addTo-btn:hover {
+	background: rgb(24, 255, 120);
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	transform: scale(1.05);
+}
+.addTo-btn:focus {
+	background: rgb(24, 255, 120);
+	border: none;
+	padding: 5px;
+	transform: scale(.95);
+	border: none;
+	outline: none;
+}
+
 /**********************************************************************************************/
 /**************************************** UPDATES  ********************************************/
 /**********************************************************************************************/
@@ -752,6 +811,41 @@ td.pages:hover {
 	padding: 10px;
 	margin: 0px;
 }
+.update-phone-link {
+	text-decoration: none;
+	color: var(--orange-color-three);
+	font-size: .8em;
+}
+.update-phone-input {
+	display: inline;
+	color: black;
+	padding: 5px;
+}
+.update-btn {
+	display: inline-grid;
+	background: var(--orange-color-three);
+	border: 0px;
+	padding: 5px 15px;
+	margin-top: 5px;
+}
+.update-btn-close {
+	display: inline-grid;
+	background: var(--orange-color-three);
+	border: 0px;
+	padding: 5px 15px;
+	margin-top: 5px;
+}
+#update-phone-form {
+	display: none;
+}
+.update-phone-form-btn {
+	display: none;
+	/* display: inline; */
+	background: var(--orange-color-three);
+	border: 0px;
+	padding: 5px 15px;
+	margin-top: 5px;
+}
 @media only screen and (max-width: 1355px) {
 	.landing-wrapper {
 		width: 75%;
@@ -845,7 +939,7 @@ nav {
 .mobile-menu {
 	display: none;
 	top: -100%;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	margin-top: 40px;

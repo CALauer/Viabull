@@ -99,18 +99,27 @@ require "../includes/header.php";
     <section class="why-section-two">
         <div class="why-wrapper-two">
             <div>
-
+                <img src="../images/SVG/infograph_1.svg" alt="infograph" class="img-75">
             </div>
-            <div>
+            <div class="flex-start">
                 <h2>Wait...there's more</h2>   
-                <p>Not only can you trade and invest, there's no limitations on what you can invest in</p>      
+                <p>Not only can you trade and invest, there's no limitations on what you can invest in! Mobile access to all these markets
+                    with commission free purchases. Take your pick on <span class="orange"> options trading </span> with the ability to 
+                    buy calls and puts. 
+                </p>
+                <p><span class="orange">Cryptos</span> are always on the market as well. So get started today!</p>      
                 <ul>
-                <li class="cta-btns-li">Stocks</li>
-                <li class="cta-btns-li">ETF's</li>
-                <li class="cta-btns-li">Cryptos</li>
-                <li class="cta-btns-li">Gold</li>
-                <li class="cta-btns-li">Options</li>
-                </ul>
+                            <li class="cta-btns-li">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.3 27.8" class="cta-btns">
+                                    <g id="f3059074-6840-42e3-adf7-c57960bb9ee0" data-name="Layer 2">
+                                    <g id="f86e30f3-19b2-400e-97db-1806dffadf53" data-name="Layer 2">
+                                    <path d="M0,18.7H1.8v1a6.4,6.4,0,0,0,6.3,6.4H26.2a6.4,6.4,0,0,0,6.3-6.4v-1h1.8v1a8.1,8.1,0,0,1-8.1,8.1H8.1A8.1,8.1,0,0,1,0,19.7Z" />
+                                    <rect x="14.5" width="5.3" height="17.11" />
+                                    <path d="M17.1,15.3H10.5a.8.8,0,0,0-.5,1.4L16.6,22a.9.9,0,0,0,1,0l6.7-5.3a.8.8,0,0,0-.5-1.4Z" />
+                                    </g></g></svg>
+                                    <span class="cta-btns-title">Download Now</span>
+                            </li>
+</ul>
             </div>
             <div>
                 <h2>Viabull Trading Game</h2>
