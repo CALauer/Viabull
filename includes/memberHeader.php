@@ -1,5 +1,5 @@
 <?php 
-echo '    <nav>
+echo '<nav>
 <div class="nav-wrapper">
   <div>
       <ul class="nav-ul">
@@ -18,13 +18,33 @@ echo '    <nav>
     </div>
     <div>
         <ul>
-          <li class="nav-li-2"><a href="javascript:void(0)" class="nav-links-2">Support</a></li>
           <li class="nav-li-2"><a href="javascript:void(0)" class="nav-links-2" id="test">My Account</a></li>
       </ul>
     </div>
 </div>
-</nav>
-<div class="mobile-nav-wrapper">
+</nav><div class="nav-2" id="watchlist">
+<div class="nav-wrapper-2" >
+      <ul class="nav-ul-2">';
+
+
+
+$id = $_SESSION['id'];
+$sql = "SELECT * FROM userstocks WHERE userId = $id";
+$result = $conn->query($sql);
+                if ($result->num_rows > 0)  { //profile view
+                    while($row = mysqli_fetch_assoc($result)) {
+                      $row = $row['stockId'];
+                      echo 
+'<li class="nav-li-3"><span class="nav-sym">'.$row.'</span><span class="perc-up">0.95%</span><span class="nav-price"> ($54.68)</li>';
+
+        }
+      }
+
+echo '
+
+</ul>
+</div>
+</div><div class="mobile-nav-wrapper">
 <div class="mobile-nav">
 <div>
   <ul class="nav-ul">
@@ -66,9 +86,10 @@ echo '    <nav>
 <div class="login-drop-down" id="login-drop-down">
 <a href="../includes/logout_inc.php" class="login-nav-btn">Log Out</a>
 <ul class="myaccount-ul">
-<li class="myaccount-li"><a href="profile.php?id='.$row["id"].'" class="myaccount-links">My Profile</a></li>
+<li class="myaccount-li"><a href="profile.php?id='.$_SESSION["id"].'" class="myaccount-links">My Profile</a></li>
 <li class="myaccount-li"><a href="javascript:void(0)" class="myaccount-links"> Account Settings</a></li>
 <li class="myaccount-li"><a href="javascript:void(0)" class="myaccount-links"> Members</a></li>
+<li class="myaccount-li"><a href="javascript:void(0)" class="myaccount-links"> Support</a></li>
 <li>
 </ul>
 </div>';

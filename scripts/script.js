@@ -99,6 +99,24 @@ $(document).ready(function() {
 		}
 ourRequest.send();
 
+function updateHtmlContent() {
+    var htmlContent=$('#watchlist').text();
+    $.ajax({
+        type: "GET",
+        datatype: "text",
+        //php function that should give you the text back
+        url: 'memberHeader-test.php',
+        success: function(data) {
+            if (htmlContent != data) {
+                $('#watchlist').text(data);
+            }
+        }
+    });
+}
+
+//compare and upate every 20 seconds
+setInterval(updateHtmlContent(), 1000);
+
 	});
 	
 	$('#myTable').on('click', '.addTo-btn', (e) => { 
@@ -110,43 +128,11 @@ ourRequest.send();
 				data: { stockID : stockID }, 
 				success: function(output){
 					alert(output);
+					location.reload(); 
+
 				}
 			});
 		});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// Actions
 	$('#test').click('click', function() {
 		console.log("clicked");
@@ -187,11 +173,17 @@ ourRequest.send();
 			});
 			function updatePhone() {
 				$('#update-phone-form, #close-update-phone-form-btn').css({display: 'inline'})
-				$('#update-phine-link').css({display: 'none'})
+				$('#update-phone-link').css({display: 'none'})
 				}
+				function updateEmail() {
+					$('#update-email-form, #close-update-email-form-btn').css({display: 'inline'})
+					$('#update-email-link').css({display: 'none'})
+					}
 				function closeUpdate() {
 					$('#update-phone-form').css({display: 'none'})
-					$('#update-phine-link').css({display: 'inline'})
+					$('#update-phone-link').css({display: 'inline'})
+					$('#update-email-form').css({display: 'none'})
+					$('#update-email-link').css({display: 'inline'})
 					}
 // Retriveing data from API working
 // MY_API_KEY = "1bc0ed7394d041a0a2760d09b2b5fe25";

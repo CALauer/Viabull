@@ -14,6 +14,7 @@
             $sql = "INSERT INTO userstocks (stockId, userId) values ('$stockID', '$id')";
             $stmt = mysqli_stmt_init($conn);
             $result = $conn->query($sql);
+            echo ''.$stockID. ' has been added to your Watchlist.';
         }
     }
     else {

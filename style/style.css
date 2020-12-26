@@ -25,6 +25,7 @@
 	--orange-color: rgb(255, 125, 86);
 	--orange-color-two: rgba(255, 125, 86, .5);
 	--orange-color-three: rgb(240, 88, 41);
+	--green-color: rgb(0, 255, 8);
 	--white-color: rgb(255, 255, 255);
 	--width-set-one: 80%;
   }
@@ -73,6 +74,9 @@ li {
 }
 .orange-three {
 	color: var(--orange-color-three);
+}
+.green {
+	color: var(--green-color);
 }
 .github-icon {
 	display: grid;
@@ -188,8 +192,7 @@ nav {
 .nav-li-3 {
 	display: inline-flex;
 	align-self: center;
-	padding-left: 20px;
-	border-right: 1px solid var(--orange-color-three);
+	padding: 0px 20px;
 	padding-right: 20px;
 }
 .nav-sym {
@@ -197,7 +200,7 @@ nav {
 	margin: auto;
 	height: 90%;
 	align-self: center;
-	font-size: .85em;
+	font-size: 1em;
 	color: var(--orange-color);
 }
 .perc-up {
@@ -206,7 +209,7 @@ nav {
 	height: 90%;
 	align-self: center;
 	font-size: .85em;
-	color: green;
+	color: var(--green-color);
 }
 .perc-down {
 	display: grid;
@@ -222,7 +225,7 @@ nav {
 	height: 90%;
 	align-self: center;
 	font-size: .85em;
-	color: var(--orange-color-two);
+	color: var(--green-color);
 }
 .nav-links {
 	display: grid;
@@ -862,6 +865,10 @@ input[type="search"]:focus {
 .profile-info-table {
 	background: transparent;
 }
+.profile-info-table th{
+	text-align: left;
+	padding: 5px;
+}
 .profile-info-table tr{
 	background: none;
 }
@@ -873,13 +880,14 @@ input[type="search"]:focus {
 	background: rgba(0, 0, 0, 0.2);
 	padding: 10px;
 	margin: 0px;
+	font-size: 1.5em;
 }
-.update-phone-link {
+.update-phone-link, .update-email-link {
 	text-decoration: none;
 	color: var(--orange-color-three);
 	font-size: .8em;
 }
-.update-phone-input {
+.update-phone-input, .update-email-input {
 	display: inline;
 	color: black;
 	padding: 5px;
@@ -898,10 +906,10 @@ input[type="search"]:focus {
 	padding: 5px 15px;
 	margin-top: 5px;
 }
-#update-phone-form {
+#update-phone-form, #update-email-form {
 	display: none;
 }
-.update-phone-form-btn {
+.update-phone-form-btn, .update-email-btn {
 	display: none;
 	/* display: inline; */
 	background: var(--orange-color-three);

@@ -72,6 +72,7 @@ require "../includes/header.php";
                         <tr><td>12/21/20</td><td>Update</td><td>Added ability to search stocksr</td><td>TBD</td></tr>
                         <tr><td>12/23/20</td><td>Update</td><td>Added ability to add stocks to watchlist</td><td>TBD</td></tr>
                         <tr><td>12/26/20</td><td>Update</td><td>Added Tyler as contributor</td><td>TBD</td></tr>
+                        <tr><td>12/26/20</td><td>Update</td><td>Added Dynamic watchlist navigation</td><td>TBD</td></tr>
                     </table>
 
                 </div>

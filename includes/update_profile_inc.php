@@ -1,13 +1,9 @@
 <?php 
     include 'config.php';
     $id = $_GET['id'];
-
     $phone = $_POST['phone'];
+    $email = $_POST['email'];
 if(isset($_POST['updatePhone'])) {
-    
-
-
-
     if (empty($phone)) { 
         header('Location: ../view/profile.php?error=emptyFields&id='.$id.'');
         exit();
@@ -19,9 +15,13 @@ if(isset($_POST['updatePhone'])) {
             header('Location: ../view/profile.php?error=sqlError&id='.$id.'');
             exit();
         }
+        else if (!is_numeric($phone)) {
+            header('Location: ../view/profile.php?error=NaN&id='.$id.'');
+            exit(); }
         else if (strlen($phone) > 10 || strlen($phone) <  7) {
             header('Location: ../view/profile.php?error=numberFormat&id='.$id.'');
             exit(); }
+
         else {
             if(strlen($phone) == 10) {
                 $areaCode = substr($phone, 0, 3);

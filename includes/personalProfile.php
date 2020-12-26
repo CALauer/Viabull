@@ -5,8 +5,8 @@ echo '
     <div class="profile-wrapper">
         <div class="profile-left">
         <a href="#" class="profile-actions-active">Account Overview</a>
-        <a href="#" class="profile-actions">Account Details</a>
-        <a href="#" class="profile-actions">Security</a>
+        <a href="#" class="profile-actions">My Watchlist</a>
+        <a href="#" class="profile-actions">Inbox</a>
         <a href="#" class="profile-actions">Transaction History</a>
         <a href="#" class="profile-actions">Payment Methods</a>
         <a href="#" class="profile-actions">Portfolio</a>
@@ -32,7 +32,29 @@ echo '
                     <tr>
                     <td class="profile-sub">Email</td>
                     <td>'. $row["email"] .'</td>
-                    </tr>
+                    <td>';
+                    // if (isset($_GET['error'])) {
+                    //     if ($_GET['error'] == "emptyFields") {
+                    //         echo 'Please fill in all fields';
+                    //     }
+                    // }
+                    // if (isset($_GET['error'])) {
+                    //     if ($_GET['error'] == "numberFormat") {
+                    //         echo 'Please enter either a 7 or 10 digit phone number';
+                    //     }
+                    // }
+                    // if (isset($_GET['error'])) {
+                    //     if ($_GET['error'] == "NaN") {
+                    //         echo 'Please enter numbers only.';
+                    //     }
+                    // }
+                    //   echo'  <a href="javascript:void(0)" onclick="updateEmail()" class="update-email-link" id="update-email-link">Update</a>
+                    //     <form action="../includes/update_profile_inc.php?id='.$row["id"].'" method="post" id="update-email-form">
+                    //     <input type="tel" class="update-email-input" name="email">
+                    //     <button type="submit" class="update-btn" name="updateEmail" id="update-email-form-btn" >Submit</button>
+                    //     <button type="button" onclick="closeUpdate()" class="update-btn-close" id="close-update-email-form-btn" >X</button>
+                    //     </form>
+                    '</tr>
                     <tr>
                     <td class="profile-sub">Phone</td>
                     <td>'. $row["phone"] .'</td>
@@ -44,10 +66,15 @@ echo '
                     }
                     if (isset($_GET['error'])) {
                         if ($_GET['error'] == "numberFormat") {
-                            echo 'Please enter only numbers';
+                            echo 'Please enter either a 7 or 10 digit phone number';
                         }
                     }
-                      echo'  <a href="javascript:void(0)" onclick="updatePhone()" class="update-phone-link" id="update-phine-link">Update</a>
+                    if (isset($_GET['error'])) {
+                        if ($_GET['error'] == "NaN") {
+                            echo 'Please enter numbers only.';
+                        }
+                    }
+                      echo'  <a href="javascript:void(0)" onclick="updatePhone()" class="update-phone-link" id="update-phone-link">Update</a>
                         <form action="../includes/update_profile_inc.php?id='.$row["id"].'" method="post" id="update-phone-form">
                         <input type="tel" class="update-phone-input" name="phone">
                         <button type="submit" class="update-btn" name="updatePhone" id="update-phone-form-btn" >Submit</button>
@@ -125,10 +152,58 @@ echo '
                     <td>$94.35</td>
                     <td>1,024</td>
                     </tr>
+                    </table>
                 </div>
             </div>
+            <div class="profile-right-one-column" id="profile_myWatchList">
+                <div class="profile-div">
+                <h1 class="profile-div-head">My Watchlist</h1>
+                    <table class="profile-info-table">
+                    <tr>
+                    <th>Symbol</th>
+                    <th>Open</th>
+                    <th>Close</th>
+                    <th>Low</th>
+                    <th>High</th>
+                    <th>Volume</th>
+                    <tr>
+                    <td>SYM</td>
+                    <td>$100.00</td>
+                    <td>$97.89</td>
+                    <td>$4.35</td>
+                    <td>$4.35</td>
+                    <td>123,999</td>
+                    </tr>
+                    <tr>
+                    <td>SYM</td>
+                    <td>$100.00</td>
+                    <td>$97.89</td>
+                    <td>$4.35</td>
+                    <td>$4.35</td>
+                    <td>123,999</td>
+                    </tr>
+                    <tr>
+                    <td>SYM</td>
+                    <td>$100.00</td>
+                    <td>$97.89</td>
+                    <td>$4.35</td>
+                    <td>$4.35</td>
+                    <td>123,999</td>
+                    </tr>
+                    <tr>
+                    <td>SYM</td>
+                    <td>$100.00</td>
+                    <td>$97.89</td>
+                    <td>$4.35</td>
+                    <td>$4.35</td>
+                    <td>123,999</td>
+                    </tr>
+                </div>
+            </div>
+                     
         </div>
     </div>
+    
 </section>
 ';
 
