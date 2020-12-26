@@ -22,7 +22,7 @@ session_start();
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
 
-    include 'memberHeader.php';
+    include 'memberHeader-test.php';
           }
         }
       }

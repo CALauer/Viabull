@@ -79,6 +79,7 @@ li {
 	width: 30px;
 	fill: var(--orange-color);
 }
+
 /**********************************************************************************************/
 /**************************************   SCROLLER   ******************************************/
 /**********************************************************************************************/
@@ -125,9 +126,20 @@ li {
 nav {
 	display: grid;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	height: 30px;
 	background-color:var(--dark-grey-color);
+}
+.nav-2 {
+	display: grid;
+	position: fixed;
+	grid-template-columns: var(--one-column);
+	height: 30px;
+	width: 100%;
+	margin-top: 35px;
+
+
 }
 .nav-wrapper {
 	display: grid;
@@ -135,6 +147,12 @@ nav {
 	width: 95%;
 	height: 30px;
 	justify-self: center;
+}
+.nav-wrapper-2 {
+	display: grid;
+	justify-self: center;
+	height: 30px;
+
 }
 .nav-wrapper div:nth-child(1){
 	display: grid;
@@ -147,6 +165,12 @@ nav {
 .nav-ul {
 	display: block;
 	height: 30px;
+	width: 100%;
+}
+.nav-ul-2 {
+	display: block;
+	height: 30px;
+	width: 100%;
 }
 
 .nav-li {
@@ -160,6 +184,45 @@ nav {
 	height: 30px;
 	padding-left: 20px;
 	vertical-align: middle;
+}
+.nav-li-3 {
+	display: inline-flex;
+	align-self: center;
+	padding-left: 20px;
+	border-right: 1px solid var(--orange-color-three);
+	padding-right: 20px;
+}
+.nav-sym {
+	display: grid;
+	margin: auto;
+	height: 90%;
+	align-self: center;
+	font-size: .85em;
+	color: var(--orange-color);
+}
+.perc-up {
+	display: grid;
+	margin: auto;
+	height: 90%;
+	align-self: center;
+	font-size: .85em;
+	color: green;
+}
+.perc-down {
+	display: grid;
+	margin: auto;
+	height: 90%;
+	align-self: center;
+	font-size: .85em;
+	color: rgb(174, 17, 0);
+}
+.nav-price {
+	display: grid;
+	margin: auto;
+	height: 90%;
+	align-self: center;
+	font-size: .85em;
+	color: var(--orange-color-two);
 }
 .nav-links {
 	display: grid;
