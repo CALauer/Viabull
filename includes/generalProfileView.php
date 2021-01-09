@@ -67,7 +67,7 @@ echo '
                     <td>$4,538.90</td>
                     </tr>
                     <tr> 
-                    <td  class="profile-sub"><a href="javascript:void(0)">Payment Methods</a></td>
+                    <td  class="profile-sub"><a href="javascript:void(0)">Make a deposit</a></td>
                     <td></td>
                     </tr>
                     </table>

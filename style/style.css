@@ -41,18 +41,18 @@ h1 {
 	color: var(--orange-color);
 	padding-bottom: 10px;
 	font-weight: 600;
-	font-size: 2.2em;
+	font-size: 1.5em;
 }
 h2 {
 	color: var(--orange-color);
 	padding-bottom: 10px;
-	font-size: 1.8em;
+	font-size: 1.3em;
 	font-weight: 500;
 }
 p {
 	color: white;
 	padding-bottom: 20px;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 ul {
 	list-style-type: none;
@@ -188,6 +188,7 @@ nav {
 	height: 30px;
 	padding-left: 20px;
 	vertical-align: middle;
+	align-items: center;
 }
 .nav-li-3 {
 	display: inline-flex;
@@ -334,6 +335,51 @@ nav {
 /************************************** CTA SECTION  *****************************************/
 /**********************************************************************************************/
 
+
+
+/**********************************************************************************************/
+/************************************ BUY COIN SECTION  ***************************************/
+/**********************************************************************************************/
+.buy_coins {
+	display: grid;
+	padding-top: 150px;
+}
+.buy_coins_wrapper {
+	display: grid;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	width: 80%;
+	grid-template-columns: var(--one-one-one-columns);
+	justify-self: center;
+}
+.buy_coins_wrapper {
+	display: grid;
+	width: 80%;
+	grid-template-columns: var(--one-one-one-columns);
+	justify-self: center;
+}
+.buy_coins_wrapper div {
+	display: grid;
+	width: 80%;
+	justify-content: center;
+}
+.buy-btns {
+	display: grid;
+	background: var(--orange-color-three);
+	height: 30px;
+	width: 100%;
+	justify-self: center;
+	justify-content: center;
+	align-content: center;
+	text-decoration: none;
+}
+.buy_img {
+	display: grid;
+	width: 100%;
+	justify-self: center;
+}
 /**********************************************************************************************/
 /*************************************  WHAT SECTION  *****************************************/
 /**********************************************************************************************/
@@ -615,6 +661,12 @@ input[type="text"]:focus, input[type="password"]:focus,input[type="email"]:focus
 	justify-content: center;
 	margin-top: 20px;
 }
+.three-column-div {
+	display: grid;
+	grid-template-columns: var(--one-one-one-columns);
+	margin: 150px 0px;
+	width: 100%;
+}
 .sponsor {
 	font-size: .95em;
 	width: 80%;
@@ -726,15 +778,23 @@ input[type="search"]:focus {
 	color: black;
 
 }
-.addTo-btn:hover {
-	background: rgb(24, 255, 120);
+.del-btn {
+	display: grid;
+	background: rgb(255, 32, 24);
+	border: none;
+	padding: 5px;
+	transition: ease-in-out 200ms;
+	font-weight: bold;
+	color: black;
+
+}
+.addTo-btn:hover, .del-btn:hover {
 	border: none;
 	padding: 5px;
 	cursor: pointer;
 	transform: scale(1.05);
 }
-.addTo-btn:focus {
-	background: rgb(24, 255, 120);
+.addTo-btn:focus, .del-btn:focus {
 	border: none;
 	padding: 5px;
 	transform: scale(.95);
@@ -794,6 +854,8 @@ input[type="search"]:focus {
 /**********************************************************************************************/
 .profile {
 	display: grid;
+	background-image: url('../images/viabull-bg.jpg');
+	height: 100vh;
 }
 .profile-wrapper {
 	display: grid;
@@ -810,9 +872,7 @@ input[type="search"]:focus {
 .profile-right-one-column {
 	display: grid;
 	align-content: flex-start;
-	gap: 30px;
 	width: 100%;
-	margin-top: 30px;
 }
 .profile-right-two-columns {
 	display: grid;
@@ -823,9 +883,12 @@ input[type="search"]:focus {
 }
 .profile-right-two-columns div, .profile-right-one-column div {
 	display: grid;
-	background: rgba(150, 150, 150, 0.1);
 	align-content: flex-start;
-	border: 1px solid var(--orange-color-two);
+	padding: 10px;
+	/* background: rgba(10, 10, 10, 0.9); */
+}
+.displayNone {
+	display: none;
 }
 
 .profile-actions {
@@ -839,21 +902,21 @@ input[type="search"]:focus {
 	text-align: center;
 	text-decoration: none;
 }
-.profile-actions-active {
+ .profile-actions.active {
 	display: grid;
 	padding: 30px;
-	background: var(--orange-color);
+	background: var(--orange-color-three);
 	height: 30px;
 	align-content: center;
 	align-items: center;
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
-	border-left: 4px solid var(--orange-color-three);
+	border-right: 4px solid var(--orange-color);
 }
 .profile-actions:hover {
 	display: grid;
-	background: var(--orange-color-three);
+	background: var(--orange-color);
 	height: 30px;
 	padding: 30px;
 	align-content: center;
@@ -863,24 +926,30 @@ input[type="search"]:focus {
 	text-decoration: none;
 }
 .profile-info-table {
-	background: transparent;
+	background: rgb(10, 10, 10);
+	border-radius: 10px;
+	padding: 20px;
 }
 .profile-info-table th{
 	text-align: left;
 	padding: 5px;
 }
-.profile-info-table tr{
-	background: none;
-}
+
+
 .profile-sub {
 	color: var(--light-grey-color);
 }
 .profile-div-head {
 	display: grid;
-	background: rgba(0, 0, 0, 0.2);
-	padding: 10px;
-	margin: 0px;
-	font-size: 1.5em;
+	margin: 0px 10px;
+	font-size: 1.2em;
+}
+.coin_icon {
+	display: grid;
+	align-self: center;
+	width: 15px;
+	margin-right: 5px;
+	fill: var(--orange-color);
 }
 .update-phone-link, .update-email-link {
 	text-decoration: none;

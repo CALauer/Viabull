@@ -161,15 +161,79 @@ setInterval(updateHtmlContent(), 1000);
 			x.fadeToggle(200).delay( 100 ).css({display: 'inline-grid', top: 0});
 			}
 		});
+
+
+
+
+
+
+
+
+
+
+			$('#myTransaction-link').click('click', function() {
+				console.log("clicked");
+				let profile_overview_link = $('#myAccountOverview-link');
+				let profile_watchlist_link = $('#myWatchlist-link');
+				let profile_transactions_link = $('#myTransaction-link');
+				let transaction_section = $('#profile_myTransactions');
+				let overview_section = $('#profile_myOverview');
+				let watchlist_section = $('#profile_myWatchList');
+
+				transaction_section.fadeIn();
+				watchlist_section.css({display: 'none'});
+				overview_section.css({display: 'none'});
+
+				profile_transactions_link.addClass('active');
+				profile_overview_link.removeClass("active");
+				profile_watchlist_link.removeClass("active");
+				console.log(profile_overview_link);
+			})
+			$('#myAccountOverview-link').click('click', function() {
+				console.log("clicked");
+				let profile_overview_link = $('#myAccountOverview-link');
+				let profile_watchlist_link = $('#myWatchlist-link');
+				let profile_transactions_link = $('#myTransaction-link');
+				let transaction_section = $('#profile_myTransactions');
+				let overview_section = $('#profile_myOverview');
+				let watchlist_section = $('#profile_myWatchList');
+
+				overview_section.fadeIn();
+				transaction_section.css({display: 'none'});
+				watchlist_section.css({display: 'none'});
+
+				profile_overview_link.addClass("active");
+				profile_transactions_link.removeClass('active');
+				profile_watchlist_link.removeClass('active');
+				console.log(profile_overview_link);
+			})
+			$('#myWatchlist-link').click('click', function() {
+				console.log("clicked");
+				let profile_overview_link = $('#myAccountOverview-link');
+				let profile_watchlist_link = $('#myWatchlist-link');
+				let profile_transactions_link = $('#myTransaction-link');
+				let transaction_section = $('#profile_myTransactions');
+				let overview_section = $('#profile_myOverview');
+				let watchlist_section = $('#profile_myWatchList');
+
+				watchlist_section.fadeIn();
+				transaction_section.css({display: 'none'});
+				overview_section.css({display: 'none'});
+
+				profile_watchlist_link.addClass("active");
+				profile_overview_link.removeClass('active');
+				profile_transactions_link.removeClass('active');
+				console.log(profile_overview_link);
+			})
+
+
 		// Profile Functions
 		$('#update-phone-btn').click('click', function() {
 			if(document.URL.indexOf("updatePhoneSuccessful") >= 0){ 
 				$('#update-phone-btn').css({display: 'none'})
 				console.log("test")
 				}
-			function test() {
-				console.log("testing")
-			}
+
 			});
 			function updatePhone() {
 				$('#update-phone-form, #close-update-phone-form-btn').css({display: 'inline'})
@@ -212,6 +276,7 @@ setInterval(updateHtmlContent(), 1000);
 
 // request.send();
 // console.log(data)
+// This prints out the contents of the payment token to the page.
 
 
 

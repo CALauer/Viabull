@@ -73,8 +73,10 @@ require "../includes/header.php";
                         <tr><td>12/23/20</td><td>Update</td><td>Added ability to add stocks to watchlist</td><td>TBD</td></tr>
                         <tr><td>12/26/20</td><td>Update</td><td>Added Tyler as contributor</td><td>TBD</td></tr>
                         <tr><td>12/26/20</td><td>Update</td><td>Added Dynamic watchlist navigation</td><td>TBD</td></tr>
+                        <tr><td>12/26/20</td><td>Update</td><td>Adjusted profile page</td><td>TBD</td></tr>
+                        <tr><td>01/09/21</td><td>News</td><td>Transfering to NODE.js</td><td>TBD</td></tr>
                     </table>
-
+<p class="orange">Production is temporarily haulted on this project as I move it to nodeJS and find a new host.</p>
                 </div>
             </div>
         </section>

@@ -4,16 +4,16 @@ echo '
 <section class="profile">
     <div class="profile-wrapper">
         <div class="profile-left">
-        <a href="#" class="profile-actions-active">Account Overview</a>
-        <a href="#" class="profile-actions">My Watchlist</a>
-        <a href="#" class="profile-actions">Inbox</a>
-        <a href="#" class="profile-actions">Transaction History</a>
-        <a href="#" class="profile-actions">Payment Methods</a>
-        <a href="#" class="profile-actions">Portfolio</a>
-        <a href="#" class="profile-actions">Open Orders</a>
+        <a href="javascript:void(0)" class="profile-actions active"  id="myAccountOverview-link">Account Overview</a>
+        <a href="javascript:void(0)" class="profile-actions">Inbox(Coming Soon)</a>
+        <a href="javascript:void(0)" class="profile-actions" id="myWatchlist-link">My Watchlist</a>
+        <a href="javascript:void(0)" class="profile-actions" id="myTransaction-link">My Transactions</a>
+        <a href="javascript:void(0)" class="profile-actions">Payment Methods(Coming Soon)</a>
+        <a href="javascript:void(0)" class="profile-actions">Portfolio(Coming Soon)</a>
+        <a href="javascript:void(0)" class="profile-actions">Open Orders(Coming Soon)</a>
         </div>
         <div class="profile-right">
-            <div class="profile-right-two-columns">
+            <div class="profile-right-two-columns" id="profile_myOverview">
                 <div class="profile-div">
                 <h1 class="profile-div-head">Your Information</h1>
                     <table class="profile-info-table">
@@ -54,7 +54,7 @@ echo '
                     //     <button type="submit" class="update-btn" name="updateEmail" id="update-email-form-btn" >Submit</button>
                     //     <button type="button" onclick="closeUpdate()" class="update-btn-close" id="close-update-email-form-btn" >X</button>
                     //     </form>
-                    '</tr>
+                    echo '</tr>
                     <tr>
                     <td class="profile-sub">Phone</td>
                     <td>'. $row["phone"] .'</td>
@@ -107,16 +107,16 @@ echo '
                     <td>$4,538.90</td>
                     </tr>
                     <tr> 
-                    <td  class="profile-sub"><a href="javascript:void(0)">Payment Methods</a></td>
+                    <td  class="profile-sub"><a href="../view/buycoins.php">Buy V-Coins</a></td>
                     <td></td>
                     </tr>
                     </table>
                 </div>
 
             </div>
-            <div class="profile-right-one-column">
+            <div class="profile-right-one-column displayNone" id="profile_myTransactions">
                 <div class="profile-div">
-                <h1 class="profile-div-head">Recent Purchases</h1>
+                <h1 class="profile-div-head">Recent Trasnactions</h1>
                     <table class="profile-info-table">
                     <tr>
                     <th>Date</th>
@@ -155,49 +155,47 @@ echo '
                     </table>
                 </div>
             </div>
-            <div class="profile-right-one-column" id="profile_myWatchList">
+
+
+
+            <div class="profile-right-one-column displayNone" id="profile_myWatchList">
                 <div class="profile-div">
                 <h1 class="profile-div-head">My Watchlist</h1>
                     <table class="profile-info-table">
                     <tr>
                     <th>Symbol</th>
+                    <th>Gain/Loss</th>
+                    <th>Current Price</th>
                     <th>Open</th>
-                    <th>Close</th>
                     <th>Low</th>
                     <th>High</th>
                     <th>Volume</th>
-                    <tr>
-                    <td>SYM</td>
-                    <td>$100.00</td>
-                    <td>$97.89</td>
-                    <td>$4.35</td>
-                    <td>$4.35</td>
-                    <td>123,999</td>
-                    </tr>
-                    <tr>
-                    <td>SYM</td>
-                    <td>$100.00</td>
-                    <td>$97.89</td>
-                    <td>$4.35</td>
-                    <td>$4.35</td>
-                    <td>123,999</td>
-                    </tr>
-                    <tr>
-                    <td>SYM</td>
-                    <td>$100.00</td>
-                    <td>$97.89</td>
-                    <td>$4.35</td>
-                    <td>$4.35</td>
-                    <td>123,999</td>
-                    </tr>
-                    <tr>
-                    <td>SYM</td>
-                    <td>$100.00</td>
-                    <td>$97.89</td>
-                    <td>$4.35</td>
-                    <td>$4.35</td>
-                    <td>123,999</td>
-                    </tr>
+                    <th>Time</th>
+                    <th>Actions</th>
+                    <tr>';
+                    $id = $_SESSION['id'];
+                    $sql = "SELECT * FROM userstocks WHERE userId = $id";
+                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0)  { //profile view
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                          $row = $row['stockId'];
+                                          echo 
+                    '<td><span class="nav-sym">'.$row.'</span></td>
+                    <td><span class="perc-up">0.95%</span></td>
+                    <td><span class="nav-price"> ($54.68)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button class="del-btn">Remove</button></td>
+                    </tr>';
+                    
+                            }
+                          } echo
+                          
+                    '</tr>
+                    </table>
                 </div>
             </div>
                      
